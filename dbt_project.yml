@@ -1,0 +1,19 @@
+name: test_project
+version: 1.0.0
+config-version: 2
+
+target-path: target
+clean-targets:
+  - target
+  - dbt_packages
+
+# Tell packages where source data is located
+vars:
+  facebook_ads_database: fivetran_database
+  facebook_ads_schema: facebook_ads
+  google_ads_database: fivetran_database
+  google_ads_schema: google_ads
+
+models:
+  +database: DEV
+  +schema: DANIEL_TULLIS
