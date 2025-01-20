@@ -7,6 +7,17 @@ clean-targets:
   - target
   - dbt_packages
 
+# OPTIONAL: Tell packages where source data is located. 
+# If you don't have the data you can leave this commented out, the packages will still create empty placeholder models.
+#
+# vars:
+#   facebook_ads_database: fivetran_database
+#   facebook_ads_schema: facebook_ads
+#   google_ads_database: fivetran_database
+#   google_ads_schema: google_ads
+
+
+# Update target destination below to tell dbt where you want your models to be written
 models:
   +database: DEV
   +schema: DANIEL_TULLIS
